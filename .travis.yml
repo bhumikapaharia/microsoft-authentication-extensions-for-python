@@ -34,7 +34,8 @@ matrix:
       os: linux
       before_install:
         - sudo apt update && python -m pip install --upgrade pip
-        - rustc --version
+        - sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        - sudo rustc --version
         - sudo apt install python3-dev libgirepository1.0-dev libcairo2-dev gir1.2-secret-1
     - python: "3.6"
       env: TOXENV=py36
