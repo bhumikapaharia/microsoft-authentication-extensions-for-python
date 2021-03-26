@@ -7,7 +7,7 @@ matrix:
       env: TOXENV=py27 PYPI=true
       os: linux
       before_install:
-        - sudo apt update 
+        - sudo apt update && python -m pip install --upgrade pip
         - sudo apt install python-dev libgirepository1.0-dev libcairo2-dev gir1.2-secret-1
     - python: "2.7"
       env: TOXENV=py27 PYPI=true
@@ -33,7 +33,7 @@ matrix:
       env: TOXENV=py36
       os: linux
       before_install:
-        - sudo apt update
+        - sudo apt update && python -m pip install --upgrade pip
         - sudo apt install python3-dev libgirepository1.0-dev libcairo2-dev gir1.2-secret-1
     - python: "3.6"
       env: TOXENV=py36
