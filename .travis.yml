@@ -35,7 +35,7 @@ matrix:
       before_install:
         - sudo apt update && pip install --upgrade pip
         - sudo apt install python3-dev libgirepository1.0-dev libcairo2-dev gir1.2-secret-1
-        - travis_wait 50 sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        - travis_wait curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         - sudo rustc --version
     - python: "3.6"
       env: TOXENV=py36
